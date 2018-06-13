@@ -20,7 +20,6 @@ rb_dir_xml = os.path.join(cwd,'rubbish','xml')
 if not os.path.exists(rb_dir):
     os.mkdir(rb_dir)
 
-
 flt = [-0.001953, -0.015625, -0.044922, -0.060547, -0.044922, -0.015625, -0.001953,
         -0.015625,  -0.080078, -0.128906, -0.128906, -0.128906, -0.080078, -0.015625,
         -0.044922,  -0.128906,  0.091797,  0.349609, 0.091797,  -0.128906, -0.044922,
@@ -122,8 +121,8 @@ for xmlf in xml_list:
 print(dict_label_cnt)
 
 ############################################## 第三步 分配训练集和验证集 ######################################
-#从数据来看，几乎每张照片都包含了5个分类的物体，可以随机分配100张图片作为训练集，剩下的作为验证集
-list_all = list(range(120))
+#从数据来看，几乎每张照片都包含了5个分类的物体，可以随机分配102张图片作为训练集，剩下的作为验证集
+list_all = list(range(122))
 list_val = random.sample(list_all, 20)
 
 #write to 'trainval' text file
@@ -138,7 +137,7 @@ dict_label_img_val = {}
 for lbs in labels:
     dict_label_img_train[lbs] = list()
     dict_label_img_val[lbs] = list()
-for sap in range(120):
+for sap in range(122):
     if sap in list_val:
         for lbs in labels:
             dict_label_img_val[lbs].append(dict_label_img[lbs][sap])
