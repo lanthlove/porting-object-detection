@@ -2,6 +2,8 @@
 
 >本仓库仅包含models中修改的文件、添加的文件以及训练的生成的graph
 
+## 关于SSD模型框架代码解析参见我的[csdn博客](https://blog.csdn.net/AECHO1/article/details/81196498)
+
 ## 具体实现流程：
 - [安装](#installation)
 - [数据处理](#dataprocess)
